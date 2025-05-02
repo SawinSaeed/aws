@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-07417cf949a60f5dd # Hier die AMI-ID deiner Wahl einfügen
+      KeyName: myKeyPair  # Hier den Namen deines EC2-Schlüsse
+      SecurityGroupIds:
+        - sg-015e453168d0476c5 # Hier die ID deiner Sicherheitsgruppe einfügen 
+      Tags:
+        - Key: Name
+          Value: MyEC2Instancesawin
